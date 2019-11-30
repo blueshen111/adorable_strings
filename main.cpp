@@ -28,7 +28,7 @@ using namespace std;
         int currentPosition = 0;
         bool foundFirstU = false;
         for (int i = 0; i <= currentLine.length() - 1; i++){
-            cout << currentLine[i] << endl;
+         //   cout << currentLine[i] << endl;
             if (currentLine.at(i) == 'u'){
                 // cout << "u found" << endl;
                 currentPosition = i;
@@ -41,7 +41,7 @@ using namespace std;
         if (foundFirstU == false){
             return false;
         }
-        cout << "passed first false" << endl;
+       // cout << "passed first false" << endl;
 
     bool foundW = false;
     for (int i = currentPosition ; i <= currentLine.length()- 1; i++){
@@ -58,13 +58,13 @@ using namespace std;
                 if (foundW == false){
                 return false;
                 }
-    cout << "passed second false" << endl;
+   // cout << "passed second false" << endl;
 
                 bool foundSecondU = false;
                 for (int i = currentPosition; i <= currentLine.length() - 1; i++){
 
                     if (currentLine.at(i) == 'u'){
-                cout << "u found" << endl;
+               // cout << "u found" << endl;
                         currentPosition = i;
                         foundSecondU = true;
                         break;
@@ -199,44 +199,44 @@ return true;
 // Here is the function that decides if a string is adorable or not
 // I am still trying to figure out how to place this function into
 // the function that loops through the file.
-    bool isItAdorable(string theString){
-       // string theString;
-        int currentPosition;
-
-        for (int i = 0; i <= theString.length() ; i++){
-
-            if (theString.at(i) =='u'){
-               // cout << "u found" << endl;
-                int i = currentPosition;
-                break;
-            }
-        }
-
-        for (int i = currentPosition ; i <= theString.length() ; i++){
-
-            if (theString.at(i) == 'w'){
-
-              //  cout << "w found" << endl;
-                int i = currentPosition;
-                break;
-            }
-
-        }
-
-        for (int i = currentPosition; i <= theString.length() ; i++){
-
-            if (theString.at(i) == 'u'){
-               // cout << "u found" << endl;
-                i = currentPosition;
-                break;
-
-            }
-
-        }
-
-        return true;
-
-    }
+//    bool isItAdorable(string theString){
+//       // string theString;
+//        int currentPosition;
+//
+//        for (int i = 0; i <= theString.length() ; i++){
+//
+//            if (theString.at(i) =='u'){
+//               // cout << "u found" << endl;
+//                int i = currentPosition;
+//                break;
+//            }
+//        }
+//
+//        for (int i = currentPosition ; i <= theString.length() ; i++){
+//
+//            if (theString.at(i) == 'w'){
+//
+//              //  cout << "w found" << endl;
+//                int i = currentPosition;
+//                break;
+//            }
+//
+//        }
+//
+//        for (int i = currentPosition; i <= theString.length() ; i++){
+//
+//            if (theString.at(i) == 'u'){
+//               // cout << "u found" << endl;
+//                i = currentPosition;
+//                break;
+//
+//            }
+//
+//        }
+//
+//        return true;
+//
+//    }
 
 
 int main()
@@ -253,11 +253,15 @@ int main()
 
 //adorability();
 
-//=wordCounter();
+wordCounter();
 
 //cout << isAdorable();
 
-cout << doTheFile();
+
+cout << doTheFile() << " strings in the file are adorable" << endl;
+
+
+
 
 
 
